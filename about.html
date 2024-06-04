@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+        <nav>
+            <img src="images/2.png" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>UI/UX Designer</p>
+            <h1>Hi, I'm <span>Justus</span><br> Jeter from North Carolina</h1>
+        </div>
+    </div>
+</div>
+<!--------about------------> 
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.JPG">
+            </div> 
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1>
+                <p>My professional journey is driven by a passion for front-end development, where I specialize in designing and building user-friendly web and mobile interfaces. I find immense satisfaction in turning complex problems into simple, beautiful, and intuitive designs. My expertise in HTML, CSS, and JavaScript allows me to create interactive and responsive websites that provide an exceptional user experience. In addition to my technical skills, I take on the role of a Scrum Master, where I leverage my understanding of Agile methodologies to facilitate team collaboration, ensure smooth workflow, and mentor new team members. I thrive in environments that encourage continuous improvement and teamwork, and I take pride in supporting my team to achieve our collective goals. Outside of my professional endeavors, I have a deep personal interest in music and anime. Music serves as a constant source of inspiration and relaxation, while anime fuels my creativity and offers unique perspectives on storytelling and character development. This blend of technical proficiency, leadership, and creative passion shapes who I am, both as a professional and as an individual.
+                </p>
+                <div class="tab-titles"> 
+                    <p class="tab-links active-link" onclick="opentab('fed', event)">Front End Development</p>
+                    <p class="tab-links" onclick="opentab('sm', event)">Scrum Master</p>
+                    <p class="tab-links" onclick="opentab('pi', event)">Personal Interest</p>
+                </div>
+                <div class="tab-contents active-tab" id="fed">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                        <li> <span> Languages</span><br> HTML, CSS, and JavaScript</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="sm">
+                    <ul>
+                        <li><span>Teaching</span><br>Scrum Masters should be proficient in Scrum practices and principles,<br> 
+                            and can act as mentors to new team members. They can help new employees understand <br> the product's 
+                            vision and scope.</li>
+                        <li> <span> Supporting team members</span><br> Scrum Masters coach team members to help 
+                            them maintain their workflow and solve problems.</li>
+                        <li><span> Communication</span><br>Scrum Masters need to be able to communicate clearly and <br>
+                            empathetically with teammates and stakeholders. They should also be active listeners <br> 
+                            and have other interpersonal skills</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="pi">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                        <li> <span> Web Development</span><br> Web App Development</li>
+                        <li><span> App Development</span><br>Building Android/iOS Apps</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (var tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (var tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    } 
+
+</script>
+
+<footer>
+    <p>&copy; 2024 Justus</p>
+</footer>
+</body>
+</html>
